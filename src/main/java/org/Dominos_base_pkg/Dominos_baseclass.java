@@ -36,6 +36,7 @@ public class Dominos_baseclass {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView()", ref);//comment
 
+
     }
 
     public static void jclick(WebDriver driver, By locatemebtn) {

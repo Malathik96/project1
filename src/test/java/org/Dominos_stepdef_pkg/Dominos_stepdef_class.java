@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.Dominos_base_pkg.Dominos_baseclass;
 import org.Dominos_pom_pkg.Dominos_pomclass;
+import org.junit.rules.Timeout;
 import org.openqa.selenium.WebDriver;
 
 public class Dominos_stepdef_class  extends Dominos_baseclass {
@@ -20,6 +21,7 @@ public class Dominos_stepdef_class  extends Dominos_baseclass {
     @When("Click on Order Online")
     public void click_on_order_online() {
         driver.findElement(pom.online_order).click();
+       // driver.manage().timeouts().implicitlyWait(Timeout.ofSeconds(12));
 
     }
     @When("Click on location button and enter the location details")
@@ -27,6 +29,7 @@ public class Dominos_stepdef_class  extends Dominos_baseclass {
         driver.findElement(pom.delivery_address).click();
         Thread.sleep(2000);
         driver.findElement(pom.enter_area).sendKeys("600045");
+        driver.manage().window().maximize();
 
 
     }
