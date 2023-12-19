@@ -34,7 +34,7 @@ public class Dominos_baseclass {
 
     public static void toScrollDown(WebDriver driver, WebElement ref) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView()", ref);
+        js.executeScript("arguments[0].scrollIntoView()", ref);//comment
 
     }
 
